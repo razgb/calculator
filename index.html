@@ -11,8 +11,14 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
-    <script defer type="module"></script>
+    <script defer type="module" src="script.js"></script>
 
     <title>Frontend Mentor | Calculator app</title>
 
@@ -27,11 +33,43 @@
       }
     </style>
   </head>
+
   <body>
     <figure class="figure-calculator">
-      <div class="calculator__container"></div>
+      <div class="calculator__container">
+        <div class="calc">
+          <p class="calc__text">calc</p>
+        </div>
+
+        <div class="screen">
+          <input class="screen__input" type="text" />
+        </div>
+
+        <div class="inputs">
+          <button class="input__btn number">7</button>
+          <button class="input__btn number">8</button>
+          <button class="input__btn number">9</button>
+          <button class="input__btn delete-btn">DEL</button>
+          <button class="input__btn number">4</button>
+          <button class="input__btn number">5</button>
+          <button class="input__btn number">6</button>
+          <button class="input__btn addition-btn">+</button>
+          <button class="input__btn number">1</button>
+          <button class="input__btn number">2</button>
+          <button class="input__btn number">3</button>
+          <button class="input__btn subtract-btn">-</button>
+          <button class="input__btn number">.</button>
+          <button class="input__btn number">0</button>
+          <button class="input__btn division-btn">÷</button>
+          <button class="input__btn multiply-btn">x</button>
+
+          <button class="input__btn reset-btn span-cols--2">RESET</button>
+          <button class="input__btn equal-btn span-cols--2">=</button>
+        </div>
+      </div>
     </figure>
 
+    <!--  -->
     <div class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
