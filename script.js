@@ -48,10 +48,40 @@ equalSign.addEventListener("click", function (e) {
   console.log(screenItems);
 
   let finalValue = 0;
+
   for (let i = 0; i < screenItems.length; i++) {
     // If the current value is an operator, skip current loop.
     if (!Number(screenItems[i])) continue;
 
-    console.log(Number(screenItems[i]));
+    // console.log(Number(screenItems[i]));
+
+    const firstNumber = Number(screenItems[i]);
+    const secondNumber = Number(screenItems[i + 2]);
+
+    // When the 'firstNumber' is the last item and 'secondNumber' doesn't exist.
+    if (!secondNumber) break;
+
+    // console.log(firstNumber, secondNumber);
+
+    const operator = screenItems[i + 1]; // an operator in string value.
+
+    if (operator === "+") {
+      finalValue += firstNumber + secondNumber;
+      continue;
+    }
+    if (operator === "-") {
+      finalValue += firstNumber - secondNumber;
+      continue;
+    }
+    if (operator === "x") {
+      finalValue += firstNumber * secondNumber;
+      continue;
+    }
+    if (operator === "÷") {
+      finalValue += firstNumber / secondNumber;
+    }
   }
+
+  // This is the solution of the operation the user wrote inside the screen.
+  screenInput.value = finalValue;
 });
